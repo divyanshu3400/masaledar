@@ -1,0 +1,25 @@
+.top {
+  margin-bottom: var(--space-3);
+}
+
+.setup {
+  font-size: var(--fs-md);
+  margin-bottom: var(--space-3);
+}
+
+.punchline {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: var(--fs-md);
+  color: var(--color-primary);
+  overflow: hidden;
+}
+
+.prompt {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--color-text-faint);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}

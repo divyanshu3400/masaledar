@@ -1,0 +1,28 @@
+.page {
+  padding: var(--space-8) var(--space-5) var(--space-10);
+}
+
+.title {
+  font-size: var(--fs-3xl);
+  font-style: italic;
+  color: var(--color-primary);
+  margin-bottom: var(--space-2);
+}
+
+.subtitle {
+  font-size: var(--fs-sm);
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-6);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-5);
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

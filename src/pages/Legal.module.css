@@ -1,0 +1,32 @@
+.page {
+  max-width: 680px;
+  padding: var(--space-8) var(--space-5) var(--space-10);
+}
+
+.title {
+  font-size: var(--fs-2xl);
+  font-style: italic;
+  color: var(--color-primary);
+  margin-bottom: var(--space-2);
+}
+
+.updated {
+  font-size: var(--fs-xs);
+  color: var(--color-text-faint);
+  margin-bottom: var(--space-8);
+}
+
+.section {
+  margin-bottom: var(--space-8);
+}
+
+.heading {
+  font-size: var(--fs-lg);
+  margin-bottom: var(--space-3);
+}
+
+.body {
+  font-size: var(--fs-sm);
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-3);
+}

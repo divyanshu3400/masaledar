@@ -1,0 +1,26 @@
+.row {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.iconActive {
+  color: var(--color-spice-active);
+}
+
+.iconInactive {
+  color: var(--color-spice-inactive);
+}
+
+.text {
+  margin-left: var(--space-1);
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.sm .text {
+  display: none;
+}

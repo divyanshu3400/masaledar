@@ -1,0 +1,22 @@
+.page {
+  padding: var(--space-12) var(--space-5);
+  text-align: center;
+}
+
+.title {
+  font-size: var(--fs-3xl);
+  font-style: italic;
+  color: var(--color-primary);
+  margin-bottom: var(--space-3);
+}
+
+.body {
+  font-size: var(--fs-md);
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-5);
+}
+
+.link {
+  font-weight: 600;
+  color: var(--color-primary);
+}

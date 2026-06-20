@@ -1,0 +1,140 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-header);
+  background-color: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.bar {
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: var(--fs-lg);
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.desktopNav {
+  display: none;
+  gap: var(--space-6);
+}
+
+.desktopToggle {
+  display: none;
+}
+
+.link {
+  font-size: var(--fs-sm);
+  font-weight: 500;
+  color: var(--color-text-muted);
+  padding-bottom: var(--space-1);
+  border-bottom: 2px solid transparent;
+  transition: color var(--duration-fast) var(--ease-standard);
+}
+
+.link:hover {
+  color: var(--color-text);
+}
+
+.linkActive {
+  color: var(--color-primary);
+  border-bottom-color: var(--color-primary);
+}
+
+.menuButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm);
+}
+
+.iconBars,
+.iconCross {
+  position: relative;
+  width: 20px;
+  height: 2px;
+  background-color: var(--color-text);
+}
+
+.iconBars::before,
+.iconBars::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  background-color: var(--color-text);
+  left: 0;
+}
+
+.iconBars::before {
+  top: -6px;
+}
+
+.iconBars::after {
+  top: 6px;
+}
+
+.iconCross::before,
+.iconCross::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  background-color: var(--color-text);
+  left: 0;
+  top: 0;
+}
+
+.iconCross::before {
+  transform: rotate(45deg);
+}
+
+.iconCross::after {
+  transform: rotate(-45deg);
+}
+
+.mobileNav {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.mobileLink {
+  padding: var(--space-4) var(--space-5);
+  font-size: var(--fs-base);
+  font-weight: 500;
+  color: var(--color-text-muted);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.mobileToggle {
+  padding: var(--space-4) var(--space-5);
+}
+
+@media (min-width: 768px) {
+  .desktopNav {
+    display: flex;
+  }
+
+  .desktopToggle {
+    display: flex;
+  }
+
+  .menuButton {
+    display: none;
+  }
+
+  .mobileNav {
+    display: none;
+  }
+}
