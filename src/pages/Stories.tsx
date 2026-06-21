@@ -1,3 +1,6 @@
+// src/pages/Stories/Stories.tsx
+import { useCallback } from "react";
+import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { stories } from "@/data/stories";
 import { useLanguage } from "@/i18n/LanguageContext";
@@ -20,6 +23,7 @@ export default function Stories() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.25, delay: i * 0.05 }}
+            style={{ cursor: "pointer" }}
           >
             <StoryCard story={story} />
           </motion.div>

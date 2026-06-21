@@ -38,6 +38,9 @@ export interface Dictionary {
   readMinutes: (n: number) => string;
   storyDetail: {
     back: string;
+    gateText: string;
+    continueReading: string;
+    gateNote: string;
   };
   ageGate: {
     heading: string;
@@ -117,6 +120,9 @@ const en: Dictionary = {
   readMinutes: (n) => `${n} min read`,
   storyDetail: {
     back: "← All stories",
+    gateText: "The spicy part is just ahead…",
+    continueReading: "Continue Reading",
+    gateNote: "A short ad will play, then the full story unlocks.",
   },
   ageGate: {
     heading: "is for grown-ups only",
@@ -201,6 +207,9 @@ const hi: Dictionary = {
   readMinutes: (n) => `${n} min ki kahani`,
   storyDetail: {
     back: "← Saari kahaniyan",
+    gateText: "Asली masala aage hai…",
+    continueReading: "Aage Padho",
+    gateNote: "Ek chhoti si ad chalegi, phir poori kahani unlock ho jayegi.",
   },
   ageGate: {
     heading: "sirf bado'n ke liye hai",

@@ -1,3 +1,6 @@
+// src/pages/Jokes/Jokes.tsx
+import { useCallback } from "react";
+import { useNavigate } from "react-router-dom";
 import { TabGroup, TabList, Tab, TabPanels, TabPanel } from "@headlessui/react";
 import { motion } from "framer-motion";
 import { jokes } from "@/data/jokes";
@@ -9,6 +12,7 @@ import styles from "./Jokes.module.css";
 
 export default function Jokes() {
   const { t } = useLanguage();
+
   const allTabs = [
     { id: "all" as const, label: t.jokesPage.allTab },
     ...categoryIds.map((id) => ({ id, label: t.categories[id] })),
@@ -27,6 +31,7 @@ export default function Jokes() {
             </Tab>
           ))}
         </TabList>
+
         <TabPanels>
           {allTabs.map((tab) => {
             const filtered =
@@ -41,7 +46,15 @@ export default function Jokes() {
                     initial={{ opacity: 0, y: 12 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.25, delay: i * 0.04 }}
+                    style={{ cursor: "pointer" }}
                   >
+                    {/*
+                      Pass disabled onClick to JokeCard so it doesn't
+                      navigate itself — the wrapper above handles it.
+                      If your JokeCard uses <Link> internally, change it
+                      to accept an onCardClick prop and call that instead
+                      of navigating, or use e.preventDefault() inside.
+                    */}
                     <JokeCard joke={joke} />
                   </motion.div>
                 ))}
@@ -50,7 +63,6 @@ export default function Jokes() {
           })}
         </TabPanels>
       </TabGroup>
-
       <AdSlot placementKey="jokes-feed-native" />
     </div>
   );

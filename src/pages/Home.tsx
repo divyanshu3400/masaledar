@@ -50,8 +50,8 @@ export default function Home() {
           ))}
         </div>
       </section>
+      <AdSlot placementKey="story-detail-sidebar" />
 
-      <AdSlot placementKey="home-hero-banner" />
 
       <section className={`container ${styles.section}`}>
         <h2 className={styles.sectionTitle}>{t.home.jokeOfDay}</h2>

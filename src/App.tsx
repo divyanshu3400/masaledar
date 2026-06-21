@@ -2,7 +2,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
 import { AgeGate } from "@/components/common/AgeGate";
 import { GlobalAdScripts } from "@/components/ads/GlobalAdScripts";
-import { Interstitial } from "@/components/ads/Interstitial";
 import { LanguageProvider } from "@/i18n/LanguageContext";
 import { routes } from "@/config/routes.config";
 
@@ -22,7 +21,6 @@ export default function App() {
       <BrowserRouter>
         <GlobalAdScripts />
         <AgeGate />
-        <Interstitial />
         <Routes>
           <Route element={<Layout />}>
             {routes.map((route) => {

@@ -41,16 +41,14 @@ export const adProviders: AdProviderConfig[] = [
       "https://js.juicyads.com/jp.php?c=4474v2u2p2a4u4r2p2b4y274a4&u=https%3A%2F%2Fwww.juicyads.rocks",
   },
 ];
-
 export interface AdSlotPlacement {
-  key: string; // referenced from pages, e.g. "home-hero-banner"
+  key: string;
   providerId: string;
-  /** ExoClick zone ID from your dashboard */
   zoneId: string;
-  width: number;
-  height: number;
+  class: string;
+  width: number | string;
+  height: number | string;
 }
-
 /**
  * Where each ExoClick ad slot on the site lives and which zone fills it.
  * Reorder, disable (by removing), or repoint a slot to a different zone
@@ -60,6 +58,7 @@ export const adPlacements: AdSlotPlacement[] = [
   {
     key: "home-hero-banner",
     providerId: "exoclick",
+    class: "eas6a97888e17",
     zoneId: "5955492",
     width: 728,
     height: 90,
@@ -68,6 +67,7 @@ export const adPlacements: AdSlotPlacement[] = [
     key: "interstitial-ad",
     providerId: "exoclick",
     zoneId: "5955490",
+    class: "eas6a97888e35",
     width: 728,
     height: 90,
   },
@@ -75,13 +75,15 @@ export const adPlacements: AdSlotPlacement[] = [
     key: "jokes-feed-native",
     providerId: "exoclick",
     zoneId: "5955498",
-    width: 300,
-    height: 250,
+    class: "eas6a97888e20",
+    width: "100%",
+    height: 50,
   },
   {
     key: "story-detail-sidebar",
     providerId: "exoclick",
     zoneId: "5955488",
+    class: "eas6a97888e2",
     width: 300,
     height: 600,
   },
@@ -89,6 +91,7 @@ export const adPlacements: AdSlotPlacement[] = [
     key: "stories-feed-native",
     providerId: "exoclick",
     zoneId: "5955498",
+    class: "eas6a97888e20",
     width: 300,
     height: 250,
   },
